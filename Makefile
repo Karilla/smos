@@ -29,4 +29,4 @@ run: e93-os.img
 	nasm $< -f bin -o $@
 
 clean:
-	rm -f *.bin *.img *.o *.bin *.o *.o *.o *.o *.o
+	rm -f *.bin *.img kernel/*.o boot/*.bin boot/*.o *.o *.o *.o *.o
