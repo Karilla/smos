@@ -1,12 +1,13 @@
 # CONNERIE DE MAKE FILE
 
-C_SOURCES = $(wildcard kernel/*.c)
+C_SOURCES = $(wildcard kernel/*.c driver/*.c cpu/*.c)
+C_HEADERS = $(wildcard kernel/*.h driver/*.h cpu/*.c)
 
 OBJ = ${C_SOURCES:.c=.o}
 
 CC = gcc
 CFLAGS = -g -m32 -ffreestanding -fno-PIC -fno-stack-protector -nostartfiles -nodefaultlibs \
-         -Wall -Wextra -Werror
+         -Wall -Wextra
 
 e93-os.img: boot/bootsect.bin kernel.bin
 	cat $^ > e93-os.bin

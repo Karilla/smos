@@ -1,8 +1,13 @@
-/* This will force us to create a kernel entry function instead of jumping to kernel.c:0x00 */
-void dummy_test_entrypoint() {
+#include "kernel.h"
+#include <stdint.h>
+
+void enable_cursor(){
+    
 }
 
-void main() {
-    char* video_memory = (char*) 0xb8000;
-    *video_memory = 'X';
+void kernel_main() {
+    clear_screen();
+    for(char i = 0; i < 26; i++){
+        WriteCharacter('a' + i,0xff,0,i,i);
+    }
 }
