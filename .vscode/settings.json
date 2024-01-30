@@ -4,6 +4,8 @@
         "cstdint": "c",
         "stdint.h": "c",
         "kernel.h": "c",
-        "screen.h": "c"
+        "screen.h": "c",
+        "random": "c",
+        "ports.h": "c"
     }
 }
