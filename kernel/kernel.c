@@ -4,5 +4,5 @@
 void kernel_main() {
   
   clear_screen();
-  enable_cursor(0,15);
-}
+  print_simple_string("Hello world");
+} 
